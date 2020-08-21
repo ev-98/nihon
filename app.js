@@ -2,11 +2,13 @@
 let controller;
 let slideScene;
 let pageScene;
-let mouse = document.querySelector('.cursor');
+const mouse = document.querySelector('.cursor');
+const burger = document.querySelector('.burger');
 
 //Event listeners
+burger.addEventListener('click', navToggle);
 window.addEventListener('mousemove', cursor);
-window.addEventListener("mouseover", activeCursor);
+window.addEventListener('mouseover', activeCursor);
 //Functions
 
 function animateSlides(){
@@ -67,17 +69,37 @@ function cursor(e){
     mouse.style.left = e.pageX + 'px';
 }
 
-function activeCursor(e){
+function activeCursor(e) {
     const item = e.target;
-    if(item.id === 'logo' || item.classList.contains('burger') || item.classList.contains('explore')){
-        mouse.classList.add('hover-active');
-    }else{
-        mouse.classList.remove('hover-active');
+    if (item.id === "logo" || item.classList.contains("burger")) {
+      mouse.classList.add("hover-active");
+    } else {
+      mouse.classList.remove("hover-active");
     }
-    if(item.classList.contains('explore')){
-        // gsap.to('.title-swipe', 1, {y = '0%'});
-    }else{
-        // gsap.to('.title-swipe', 1, {y = '0%'});
+    if (item.classList.contains("explore")) {
+      mouse.classList.add("explore-active");
+      gsap.to(".title-swipe", 1, { y: "0%" });
+    } else {
+      mouse.classList.remove("explore-active");
+      gsap.to(".title-swipe", 1, { y: "100%" });
     }
+  }
+
+function navToggle(e){
+    if (!e.target.classList.contains("active")) {
+        e.target.classList.add("active");
+        gsap.to(".line1", 0.5, { rotate: "45", y: 5, background: "black" });
+        gsap.to(".line2", 0.5, { rotate: "-45", y: -5, background: "black" });
+        gsap.to("#logo", 1, { color: "black" });
+        gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%)" });
+        document.body.classList.add("hide");
+      } else {
+        e.target.classList.remove("active");
+        gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "white" });
+        gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "white" });
+        gsap.to("#logo", 1, { color: "white" });
+        gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -10%)" });
+        document.body.classList.remove("hide");
+      }
 }
 animateSlides();

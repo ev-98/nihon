@@ -83,7 +83,7 @@ main {
 }
 
 .festival-span{
-    color: rgb(117, 89, 39);
+    color: #bc002d;
 }
 
 .fashion-span{
@@ -210,7 +210,7 @@ main {
 }
 
 .t-swipe2{
-    background: rgb(117, 89, 39);
+    background: #bc002d;
 }
 
 .t-swipe3{
@@ -280,24 +280,33 @@ body.hide {
       padding: 5rem 0rem;
   }
 
-  .fashion1 h1,
-  .festival1 h1,
+  .fashion1 h1{
+      color: #bc002d;
+  }
   .mountain1 h1{
-      color: #bc002d;
+    color:#648CC7;
   }
-
-  .fashion2 h1,
-  .festival2 h1,
+  .festival1 h1{
+    color: #DC2C04;
+  }
+  .fashion2 h1{
+    color: rgb(117, 89, 39);
+  }
   .mountain2 h1{
-      color: rgb(117, 89, 39);
+    color: #D0B7BF;
   }
-
-  .fashion3 h1,
-  .festival3 h1,
+  .festival2 h1{
+    color: #542F50;
+  }
+  .fashion3 h1{
+    color: #FB0403;
+  }
+  .festival3 h1{
+    color: #FFA200;
+  }
   .mountain3 h1{
-      color: #bc002d;
+    color:  #FD2F23;
   }
-
   .fashion-text p,
   .mountain-text p,
   .festival-text p{

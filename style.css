@@ -179,6 +179,7 @@ main {
     opacity: 1;
     transition-property: background, transform;
     transform-origin: 75% 75%;
+    z-index:7;
 }
 
 .cursor.hover-active{
@@ -224,3 +225,106 @@ main {
 body.hide {
     overflow: hidden;
   }
+
+  /* slide pages */
+  .fashion1,
+  .fashion2,
+  .fashion3,
+  .mountain1,
+  .mountain2,
+  .mountain3,
+  .festival1,
+  .festival2,
+  .festival3
+  {
+      min-height: 90vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      margin: auto;
+      color: white;
+      margin-top: 5rem;
+      flex-wrap: wrap;
+      position: relative;
+  }
+  .fashion-img,
+  .mountain-img,
+  .festival-img{
+      height: 70vh;
+      flex-basis: 30rem;
+  }
+
+  .fashion-text,
+  .mountain-text,
+  .festival-text{
+      flex: 1;
+      position: relative;
+      flex-basis: 25rem;
+  }
+
+  .fashion-img img,
+  .mountain-img img,
+  .festival-img img
+  {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .fashion-text h1,
+  .mountain-text h1,
+  .festival-text h1{
+      font-size: 6rem;
+      padding: 5rem 0rem;
+  }
+
+  .fashion1 h1,
+  .festival1 h1,
+  .mountain1 h1{
+      color: #bc002d;
+  }
+
+  .fashion2 h1,
+  .festival2 h1,
+  .mountain2 h1{
+      color: rgb(117, 89, 39);
+  }
+
+  .fashion3 h1,
+  .festival3 h1,
+  .mountain3 h1{
+      color: #bc002d;
+  }
+
+  .fashion-text p,
+  .mountain-text p,
+  .festival-text p{
+      font-size: 2rem;
+      padding: 2rem 2rem 0rem 0rem;
+      margin-bottom: 10rem;
+  }
+
+  .swipe{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+  }
+
+  .swipe1{
+      background: #bc002d;
+      z-index: 5;
+  }
+
+  .swipe2{
+    background: white;
+    z-index:4;
+}
+
+.swipe3{
+    background: #bc002d;
+    z-index: 3;
+}

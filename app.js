@@ -71,7 +71,7 @@ function cursor(e){
 
 function activeCursor(e) {
     const item = e.target;
-    if (item.id === "logo" || item.classList.contains("burger")) {
+    if (item.id === "logo" || item.classList.contains("burger") || item.classList.contains("link-text")) {
       mouse.classList.add("hover-active");
     } else {
       mouse.classList.remove("hover-active");

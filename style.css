@@ -139,7 +139,7 @@ main {
     flex-basis: 30rem;
 }
 
-.nav-links h3{
+.nav-text{
     padding: 3rem 0rem;
 }
 
@@ -275,6 +275,7 @@ body.hide {
   .fashion-text h1,
   .mountain-text h1,
   .festival-text h1{
+    font-family: 'Abril Fatface', cursive;
       font-size: 6rem;
       padding: 5rem 0rem;
   }
@@ -328,3 +329,131 @@ body.hide {
     background: #bc002d;
     z-index: 3;
 }
+
+
+@media screen and (max-width: 1024px) {
+    main {
+      width: 100%;
+      margin: 0;
+    }
+    .slide {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .hero-desc {
+      padding: 0;
+    }
+    .hero-img {
+      padding-top: 4rem;
+    }
+    .hero-desc h2 {
+      font-size: 2rem;
+      padding: 1rem 0rem;
+    }
+    .hero-desc p {
+      padding: 1rem 1rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+    .explore {
+      width: 60%;
+      margin: auto;
+    }
+    .detail-slide {
+      width: 100%;
+      text-align: center;
+    }
+    .fashion-text p {
+      margin-bottom: 5rem;
+      padding: 0;
+    }
+    .fashion-text h1 {
+      margin: 2rem 0rem;
+    }
+    .festival-text p {
+        margin-bottom: 5rem;
+        padding: 0;
+      }
+    .festival-text h1 {
+        margin: 2rem 0rem;
+      }
+    .mountain-text p {
+        margin-bottom: 5rem;
+        padding: 0;
+      }
+    .mountain-text h1 {
+        margin: 2rem 0rem;
+      }
+    .nav-bar {
+      display: block;
+    }
+    .nav-links {
+        margin-top: 3.7rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .nav-text{
+     padding: 2rem;
+    }
+    .contact h2 {
+      font-size: 3rem;
+      text-align: center;
+      padding-bottom: 0;
+    }
+    .contact p {
+      font-size: 1.2rem;
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    /* .hero-desc h2 {
+        font-size: 3rem;
+        padding: 1rem 0rem;
+      }
+      .hero-desc p {
+        padding: 1rem 1rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+      } */
+    .hero-img {
+      height: 50vh;
+    }
+    .fashion-text h1 {
+      font-size: 2rem;
+      padding: 1rem 0rem;
+    }
+    .fashion-text p {
+      font-size: 1.2rem;
+    }
+    .fashion-img img {
+      height: 50vh;
+      object-position: top;
+    }
+    .mountain-text h1 {
+        font-size: 2rem;
+        padding: 1rem 0rem;
+      }
+      .mountain-text p {
+        font-size: 1.2rem;
+      }
+      .mountain-img img {
+        height: 50vh;
+        object-position: top;
+      }
+      .festival-text h1 {
+        font-size: 2rem;
+        padding: 1rem 0rem;
+      }
+      .festival-text p {
+        font-size: 1.2rem;
+      }
+      .festival-img img {
+        height: 50vh;
+        object-position: top;
+      }
+  }
